@@ -1,0 +1,26 @@
+Task is added to sprint:
+1) Write checklist for all requirement
+2) Public checklist for review
+3) Manual testing
+4) Automation on feature
+
+
+Code conventions:
+https://github.com/rubocop/ruby-style-guide
+
+Git
+Forking workflow
+https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow
+
+Central repo
+Each user can fork repo to it's
+Each user can make changes to it's fork
+Each user can create pull requests
+Pull request are reviewable
+Pull request merge central repository
+
+Story:
+As a Portal, I want to have endpoint for groups
+AC:
+ # on get call returns data on groups
+ # on put call modifies groups

@@ -12,6 +12,14 @@ Git
 Forking workflow
 https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow
 
+
+Git command
+set upstream to central repo
+make changes
+make new branch
+make commit
+create PR
+
 Central repo
 Each user can fork repo to it's
 Each user can make changes to it's fork

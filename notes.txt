@@ -4,7 +4,6 @@ Task is added to sprint:
 3) Manual testing
 4) Automation on feature
 
-
 Code conventions:
 https://github.com/rubocop/ruby-style-guide
 
@@ -15,17 +14,46 @@ https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow
 Create Pull Request
 https://opensource.com/article/19/7/create-pull-request-github
 
+
+Git command
+set upstream to central repo
+make changes
+make new branch
+make commit
+=======
 Workflow for creating PR:
 set upstream to central repo ( git remote add upstream https://github.com/AndriiMish/TAQC.git )
 make new branch (git checkout -b new_branch)
 make changes
 make commit (git add -> git commit -m 'message' -> git push)
+
 create PR
 ask for review
 fix comments
 merge after approve
 
 checkout to newly created branch
+
+git checkout -b branchname
+
+get latest changes from upstream -> getting changes to your local
+git checkout master
+git fetch upstream   -> get all branches from upstream
+git merge upstream/master   -> merge changes from branch master of upstream to current branch
+git push  -> push changes to local branch
+
+you're on some branch
+hides local changes
+git checkout new_branch
+git stash
+git checkout master
+git fetch upstream
+git merge upstream/master
+git push
+git checkout new_branch
+git rebase
+git stash apply
+=======
 # git checkout -b branchname
 
 get latest changes from upstream -> getting changes to your local
@@ -46,6 +74,7 @@ hides local changes
 # git rebase
 # git stash apply
 
+
 Central repo
 Each user can fork repo to it's own
 Each user can make changes to it's fork
@@ -53,8 +82,7 @@ Each user can create pull requests
 Pull request are reviewable
 Pull request merge central repository
 
-Story:
-As a Portal, I want to have endpoint for groups
-AC:
- # on get call returns data on groups
- # on put call modifies groups
+Task:
+1) Fork Git repo
+2) Add checklist.txt or dummy file to check how it works
+3) Create PullRequest

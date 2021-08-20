@@ -1,0 +1,190 @@
+Sidebar filters
+________Categories__________
+
+1. Verify Catalog page contains available filters for items displayed: 
+   Categories, Size, Color, Composition, Styles, Properties, 
+   Availability, Manufacturer, Condition
+
+2. Verify 'Catalog' page 'Categories' filter displays 
+   available categories options to filter: Tops, Dresses
+
+3. Verify selecting 'Categories' filter option 'Tops' 
+   displays only items 'Tops' on page
+
+4. Verify selecting 'Categories' filter option 'Dresses' 
+   displays only items 'Tops' on page
+
+__________Size___________
+
+5. Verify 'Catalog' page 'Size' filter displays 
+   available size options to filter: S, M, L
+
+6. Verify selecting 'Size' filter 'S' option 
+   displays only items with 'S' size on page
+
+7. Verify selecting 'Size' filter 'M' option  
+   displays only items with 'M' size on page
+
+8. Verify selecting 'Size' filter 'L' option  
+   displays only items with 'L' size on page
+
+__________Color_____________
+
+9. Verify 'Catalog' page 'Color' filter displays 
+   available color options to filter: Beige, White, 
+   Black, Orange, Blue, Green, Yellow, Pink
+
+10.Verify selecting 'Color' filter 'Beige' option 
+   displays only items with 'Beige' color on page
+
+11.Verify selecting 'Color' filter 'Pink' option 
+   displays only items with 'Pink' color on page
+
+12.Verify selecting 'Color' filter removed after unchecking in
+   'Color' filter on catalog page
+
+_________Compositions___________
+
+13.Verify 'Catalog' page 'Compositions' filter displays 
+   available compositions options to filter: Cotton, Polyester, Viscose
+
+14.Verify selecting 'Compositions' filter 'Cotton' option 
+   displays only items with 'Cotton' compositions on page
+
+15.Verify selecting 'Compositions' filter 'Polyester' option 
+   displays only items with 'Polyester' compositions on page
+
+16.Verify selecting 'Compositions' filter 'Viscose' option 
+   displays only items with 'Viscose' compositions on page
+
+17.Verify selecting 'Compositions' filter removed after unchecking in
+   'Compositions' filter on catalog page
+
+____________Styles_____________
+
+18.Verify 'Catalog' page 'Styles' filter displays 
+   available compositions options to filter: Casual, Dressy, Girly
+
+19.Verify selecting 'Styles' filter 'Casual' option 
+   displays only items with 'Casual' styles on page
+
+20.Verify selecting 'Styles' filter 'Dressy' option 
+   displays only items with 'Dressy' styles on page
+
+21.Verify selecting 'Styles' filter 'Girly' option 
+   displays only items with 'Girly' styles on page
+
+22.Verify selecting 'Styles' filter removed after unchecking in
+   'Styles' filter on catalog page
+
+_____________Properties__________
+
+23.Verify 'Catalog' page 'Properties' filter displays 
+   available properties options to filter: Colorful Dress, Maxi Dress, 
+   Midi Dress, Short Dress, Short Sleeve
+
+24.Verify selecting 'Properties' filter 'Colorful Dress' option 
+   displays only items with 'Colorful Dress' properties on page
+
+25.Verify selecting 'Properties' filter 'Short Sleeve' option 
+   displays only items with 'Short Sleeve' properties on page
+
+26.Verify selecting 'Properties' filter removed after unchecking in
+   'Properties' filter on catalog page
+
+______________Availability_________
+
+27.Verify 'Catalog' page 'Availability' filter displays 
+   available availability options to filter: In stock
+
+28.Verify selecting 'Availability' filter 'In stock' option 
+   displays only items with 'In stock' availability on page
+
+29.Verify selecting 'Availability' filter removed after unchecking in
+   'Availability' filter on catalog page
+
+________Manufacturer____________
+
+30.Verify 'Catalog' page 'Manufacturer' filter displays 
+   available manufacturer options to filter: Fashion Manufacturer
+
+31.Verify selecting 'Manufacturer' filter 'Fashion Manufacturer' option 
+   displays only items with 'Fashion Manufacturer' manufacturer on page
+
+32.Verify selecting 'Manufacturer' filter removed after unchecking in
+   'Manufacturer' filter on catalog page
+
+____________Condition____________
+
+33.Verify 'Catalog' page 'Condition' filter displays 
+   available condition options to filter: New
+
+34.Verify selecting 'Condition' filter 'New' option 
+   displays only items with 'New' condition on page
+
+35.Verify selecting 'Condition' filter removed after unchecking in
+   'Condition' filter on catalog page
+
+______________Price______________
+
+36.Verify 'Catalog' page 'Price' filter displays available price options
+   to filter: Changeable range set by default from Min 16$ to Max 53$
+
+37.Verify selecting 'Price' filter lower range options of price 
+   from $16 displays items cost more $16
+
+38.Verify selecting 'Price' filter high range options of price 
+   to $53 displays items cost less $53
+
+39.Verify selecting 'Price' filter with fixed price option displays 
+   items match price
+
+
+____________Sort by_____________
+
+40.Verify 'Women' main body 'Sort by' filter displays 
+   available sort options to filter: --, Price: Lowest first, 
+   Price: Highest first, Product Name: A to Z, Product Name: Z to A,
+   In stock, Reference: Lowest first, Reference: Highest first
+
+41.Verify selecting 'Sort by' filter '--' option 
+   displays items without sorting on page
+
+42.Verify selecting 'Sort by' filter 'Price: Lowest first' option 
+   displays sorted items by lowest price on page
+
+43.Verify selecting 'Sort by' filter 'Price: Highest first' option 
+   displays sorted items by highest price on page
+
+44.Verify selecting 'Sort by' filter 'Product Name: A to Z' option 
+   displays sorted items by name increase alphabetically on page
+
+45.Verify selecting 'Sort by' filter 'Product Name: Z to A' option 
+   displays sorted decreasing items by name alphabetically on page
+
+46.Verify selecting 'Sort by' filter 'In stock' option 
+   displays items wich in stock
+
+47.Verify selecting 'Sort by' filter 'Reference: Lowest first' option 
+   displays sorted items by lowest reference on page
+
+48.Verify selecting 'Sort by' filter 'Reference: Highest first' option 
+   displays sorted items by heighest reference on page
+
+_______________View_____________
+
+49.Verify 'Women' main body 'View' filter displays 
+   available sort options to filter: Grid, List
+
+50.Verify selecting 'View' filter 'Grid' option 
+   displays by default and items display in grid on page
+
+51.Verify selecting 'View' filter 'List' option 
+   displays items in list on page
+
+
+
+
+
+
+

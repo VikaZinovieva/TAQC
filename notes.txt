@@ -86,3 +86,59 @@ Task:
 1) Fork Git repo
 2) Add checklist.txt or dummy file to check how it works
 3) Create PullRequest
+
+
+20/08
+
+Git squash
+https://medium.com/nuances-of-programming/как-сжимать-коммиты-в-git-с-помощью-git-squash-8a84b9f62734
+
+bundler -> manage gems added to project
+https://bundler.io
+before start working with project
+# bundle install
+
+RSpec
+https://relishapp.com/rspec/docs/gettingstarted
+in folder with spec run command rspec --init
+it will create spec_helper file
+
+Docs on hooks etc
+https://relishapp.com/rspec/rspec-core/v/2-0/docs/hooks/before-and-after-hooks
+
+Betterspecs
+https://www.betterspecs.org/#describe
+
+Rspec matchers
+https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+
+!!!!!! Driver for Firefox
+Update Firefox
+Download geckodriver
+https://github.com/mozilla/geckodriver/releases
+Place geckodriver into any folder listed in PATH
+for macos check it via command -->  echo $PATH
+for windows https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+
+
+Locators for elements
+1. ID
+2. Class
+3. Name
+4. css
+5. xpath
+
+If You want to stop execution and check/test anything
+on line with error with error
+
+TDB:
+# parent class for pages
+
+
+TO SETUP ENVIRONMENT:
+1) install bundler
+2) install geckodriver
+3) add folder with geckodriver to ENV variable PATH (or move it to one already written)
+4) run 'bundle update' from this folder
+5) run 'rspec spec/test/sign_in_ui_spec.rb  --color --format doc' to verify all setup is good
+

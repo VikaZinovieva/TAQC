@@ -1,10 +1,5 @@
-class SignInPage
+class SignInPage < BasePage
   PAGE_TITLE = 'AUTHENTICATION'
-
-  def page_title
-    #TBD to move to parent page
-    browser.find_element(class: 'page-heading')
-  end
 
   def email_input
     browser.find_element(id: 'email')

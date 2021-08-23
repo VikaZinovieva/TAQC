@@ -142,3 +142,13 @@ TO SETUP ENVIRONMENT:
 4) run 'bundle update' from this folder
 5) run 'rspec spec/test/sign_in_ui_spec.rb  --color --format doc' to verify all setup is good
 
+23.08
+require 'pry' may be needed at top of file
+to debug
+1) add binding.pry to file on some line
+2) exit continues running
+3) exit! exits immediately
+
+# rspec spec/search_spec.rb:37 lets You run only test at line 37
+
+

@@ -1,0 +1,58 @@
+Description block & Feature | Result (P\F)
+
+ ______TopLevelMenu________
+ 1. Verify that user can click on the subtabs on the Dresses tab (P)
+ 2. Verify that upon clicking on the any (P)
+ active and available subtab user is redirected (P)
+ to the choosed subtab page
+ (e.g Dresses -> Casual Dresses -> Casual Dresses page)
+ 3. Verify upon clicking on Dresses tab user is redirected to Dreeses page (P)
+ 4. Verify that user can click on the subtabs on the Women tab (P)
+ 5. Verify upon clicking on the Women tab user is redirected to Women page (P)
+ 6. Verify that user can click on the T-shirts tab (P)
+ 7. Verify upon clicking on the T-shirts tab user is redirected to T-shirts page (P)
+
+ ____Sidebar (Filter)_____
+ 8. Verify that 'Tops' filter tab is opens (P)
+ 9. Verify that 'Dresses' filter tab is open (P)
+ 10. Verify that 'Tops' filter tab select (P)
+ 11. Verify that 'Dresses' tab filter select (P)
+ 12. Verify that 'Size' filter tab is select (P)
+ 13. Verify that 'Color' filter tab is select (P)
+ 14. Verify that 'Compositions' filter tab is select (P)
+ 15. Verify that 'Styles' filter tab is select (P)
+ 16. Verify that 'Properties' filter tab is select (P)
+ 17. Verify that 'Availability' filter tab is select (P)
+ 18. Verify that 'Manufacturer' filter tab is select (P)
+ 19. Verify that 'Condition' filter tab is select (P)
+ 20. Verify that user can edit 'Price' by range filter (P)
+ 21. Verify that user can sort by dropdown list (P)
+
+ ___Items___
+ 22. Verify that user can click on the any
+ available item on the main page (click
+ on the icon) (P)
+ 23. Verify that user can click on the any
+ available item on the main page (click
+ on the name) (P)
+ 24. Verify that user can change color of the
+ selected item (P)
+ 25. Verify that user can click on the photo and see
+ the current item (P)
+ 26. Verify that user can switch the photos by clicking on the arrows button (P)
+ 27. Verify that user can edit quantity by using arrow buttons (P)
+ 28. Verify that user can edit quantity by using positive numbers (e.g 1,2,3,4 etc.) (P)
+ 29. Verify that user can not edit quantity by using negative numbers (e.g -1, -5 etc.) (P)
+ 30. Verify that user can not edit quantity by using symbols (e.g @, &, ? etc.) (P)
+ 31. Verify that user can not edit quantity by using letters by any length (words) (e.g a, abc, andy etc.) (P)
+
+ ___Search___
+ 32. Verify searching by existing item title redirects to page with results containing that item (P)
+ 33. Verify searching with one symbols displays all items containing that symbol in title (P)
+ 34. Verify that user can see an error message by typing incorrect data length (F)
+ 35. Verify that user can find items by using search field with
+ empty field" (P)
+ "Verify that user can find items by using search field with
+ symbols (e.g %,^,@)" (P)
+ "Verify that user can find items by using search field with
+ copied text" (P)

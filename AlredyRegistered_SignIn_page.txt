@@ -48,10 +48,10 @@ Invalid:
 8. Domain part has special characters like !#$%&’*+-/=?^_{|}~,
 9. Domain part has one part without dot(.)
 
---PASSWORD--
+--PASSWORD-- 
 Valid:
 1. Password length is from 5 to 32 symbols.
 
-Invalid:
+Invalid: 
 1. Password length is less than 5.
 2. Password length is more than 32.

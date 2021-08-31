@@ -4,8 +4,8 @@ RSpec.describe 'SignIn page' do
   landing_page = LandingPage.new
   sign_in_page = SignInPage.new
   my_account_page = MyAccountPage.new
-
-  before(:all) do
+  #rspec spec/test/sign_in_page_spec.rb  --color --format
+  before(:all)
     browser.get(HOME_PAGE)
     landing_page.sign_in_button.click
   end

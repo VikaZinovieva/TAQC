@@ -18,4 +18,4 @@ RSpec.describe 'SignIn page' do
       expect(my_account_page.on_page?).to be(true)
     end
   end
-end
+

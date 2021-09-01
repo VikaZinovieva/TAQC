@@ -23,4 +23,16 @@ class SignInPage
     password_input.send_keys(password)
     sign_in_button.click
   end
-end
+
+  def error_message
+    browser.find_element(xpath:"//div[@id = 'center_column']/div[@class ='alert alert-danger']")
+  end
+
+  def clear_fields
+    browser.find_element(id: 'email').clear
+    browser.find_element(id: 'passwd').clear
+
+  end
+
+  end
+

@@ -1,4 +1,4 @@
-require 'selenium-webdriver'
+require'selenium-webdriver'
 path = '/Users/viktoriazinoveva/Documents/TAQC/drivers/chromedriver'
 
 Given(/^I open a browser$/) do
@@ -9,8 +9,8 @@ end
 
 When(/^I login with user login and password$/) do |email,password|
   @browser.find_element(xpath: "//input [@id='email']").send_keys email
-@browser.find_element(xpath: "//input [@id='passwrd']" ).send_keys password
-  @browser.find_element(xpath: "//*[@id='submitlogin']" ).click
+  @browser.find_element(xpath: "//input [@id='passwrd']" ).send_keys password
+  @browser.find_element(xpath: "// button [@id='submitlogin']" ).click
 end
 
 Then(/^I verify My account page loaded$/) do

@@ -1,0 +1,43 @@
+'Register'
+
+Verify that user can log in.
+1. Site is open.
+2. Click 'Sign in' button. 
+3. Fill 'Email address' field with valid data.
+4. Fill 'Password' field with valid data.
+5. Click 'Sign in' button.
+
+
+Verify that the email input field is validated
+1.  Click 'Sign in' button with empty  'Email address' field.
+
+Verify that the password input field is validated
+1.  Click 'Sign in' button with empty  'Password' field.
+'Register'
+
+Verify that user can`t log in with invalid email
+1.  Click 'Sign in' button with with invalid 'Email address' field.
+
+Verify that user can`t log in with invalid password
+1.  Click 'Sign in' button with invalid 'Password' field.
+
+Verify that user can restore password
+1. Site is open.
+2. Click 'Sign in' button.
+3. Click 'Forgot your password?' link.
+4. Fill 'Email address' field with valid data.
+5. Click 'Retrive password' button.
+6. Fill 'Restore password' field with valid data.
+7. Fill 'New password' field.
+8. Fill 'Repeat password' field. 
+--------------------------------------------------------------
+
+'Cart'
+
+Verify that user can add an item to cart
+1. Open the product list and click 'Add to cart' on random card.
+2. Check 'Cart' with added product.
+
+Verify that user can click on 'Proceed to checkout' button and all the steps to purchase.
+
+Verify that user can add 100 items to the 'Cart'.

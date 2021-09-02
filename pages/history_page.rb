@@ -1,0 +1,3 @@
+class HistoryPage < BasePage
+   
+end

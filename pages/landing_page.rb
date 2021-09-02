@@ -3,3 +3,4 @@ class LandingPage < BasePage
     browser.find_element(class: 'login')
   end
 end
+

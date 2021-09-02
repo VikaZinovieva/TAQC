@@ -1,0 +1,3 @@
+class YourPersonalInfoPage < BasePage
+    
+end

@@ -13,9 +13,15 @@ class SignInPage < BasePage
     browser.find_element(id: 'SubmitLogin')
   end
 
+  def my_account
+    browser.find_element(id: 'my-account')
+  end
+
   def login_user(email, password)
     email_input.send_keys(email)
     password_input.send_keys(password)
     sign_in_button.click
+    wait_for{ browser.find_element(id: 'my-account') }
   end
 end
+

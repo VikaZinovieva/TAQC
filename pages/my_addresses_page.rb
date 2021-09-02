@@ -1,0 +1,3 @@
+class MyAddressesPage < BasePage
+    
+end

@@ -8,7 +8,7 @@ class BasePage
   end
 
   def wait_for(&block)
-    wait = Selenium::WebDriver::Wait.new(timeout: 60, interval: 1)
+    wait = Selenium::WebDriver::Wait.new(timeout: 60, interval: 10)
     wait.until do
       block.call
     end

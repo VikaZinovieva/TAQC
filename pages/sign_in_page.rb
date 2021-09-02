@@ -1,10 +1,5 @@
-class SignInPage
+class SignInPage < BasePage
   PAGE_TITLE = 'AUTHENTICATION'
-
-  def page_title
-    #TBD to move to parent page
-    browser.find_element(class: 'page-heading')
-  end
 
   def email_input
     browser.find_element(id: 'email')
@@ -18,12 +13,17 @@ class SignInPage
     browser.find_element(id: 'SubmitLogin')
   end
 
+  def my_account
+    browser.find_element(id: 'my-account')
+  end
+
   def login_user(email, password)
     email_input.send_keys(email)
     password_input.send_keys(password)
     sign_in_button.click
+    wait_for{ browser.find_element(id: 'my-account') }
   end
-
+  
   def error_message
     browser.find_element(xpath:"//div[@id = 'center_column']/div[@class ='alert alert-danger']")
   end
@@ -35,4 +35,3 @@ class SignInPage
   end
 
   end
-

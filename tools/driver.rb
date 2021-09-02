@@ -15,3 +15,4 @@ Driver.new
 def browser
   $driver
 end
+

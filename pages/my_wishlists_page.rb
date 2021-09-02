@@ -1,0 +1,3 @@
+class MyWishlistsPage < BasePage
+    
+end 

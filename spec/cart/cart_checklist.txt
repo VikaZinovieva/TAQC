@@ -1,0 +1,22 @@
+Cart
+
+-----Positive-----
+
+1. Verify that click 'Cart' button redirects to the 'Cart' page.
+2. Verify that click 'Check out' button shows all items in cart -> user redirected to the 'Cart' page.
+3. Verify that clicking on any item's 'Add to cart' button adds this item to the cart -> 'Cart' page is open and all chosen items are displayed.
+4. Verify that all steps after click on 'Proceed to checkout' button are passed -> 'Order confirmation' page opened.
+5. Verify that cklicking 'Continue shopping' in the 'Cart' page redirects user to the landing page.
+6. Verify that cart button is displayed on every page.
+7. Verify that previously added items is avaliable in cart.
+8. Verify that button '+' in the 'Cart' page increases quantity of partiular item by one unit.
+9. Verify that button '-' in the 'Cart' page decreases quantity of partiular item by one unit.
+10. Verify that previously added to the cart item can be removed by clicking 'Delete' button in the 'Cart' page. 
+11. Verify that previously added items are avaliable after user log out and log in again.
+12. Verify that 100 items can be added to the cart.
+
+-----Negative-----
+
+1. Verify that after log out, all previously added items no more displyed in cart.
+2. Verify that without logged in user can`t make order -> Not logged user click 'Proceed to checkout' button redirects to 'Sign in' page.
+3. Verify that order is unavailable with empty cart -> Message "Your shopping cart is empty." is displayed.

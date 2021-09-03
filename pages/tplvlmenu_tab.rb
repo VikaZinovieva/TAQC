@@ -32,6 +32,4 @@ class TPLMTab < BasePage
   def tshirts_label
 	browser.find_element(xpath: '//div[@class="breadcrumb clearfix"]/span["T-shirts"]')
   end
-  
-  
 end

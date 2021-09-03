@@ -1,0 +1,68 @@
+[‘Landing’ page] Verify if 'Sign in' button is displayed if User is not signed in.
+[‘Landing’ page] Verify upon clicking on ‘Sign in' button User is redirected to ‘Authentication’ page.
+
+---------
+
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ and ‘Password’ fields with valid existing data and clicking on ‘Sign in’ button User is redirected to ‘My Account’ page.
+
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ and ‘Password’ fields with invalid data and clicking on ‘Sign in’ button ‘Invalid email address.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with invalid data and filling ‘Password’ field with valid data and clicking on ‘Sign in’ button ‘Invalid email address.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with valid data and filling ‘Password’ field with invalid data and clicking on ‘Sign in’ button ‘Invalid password.’ message is shown.
+
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon leaving ‘Email address’ and ‘Password’ fields are empty and clicking on ‘Sign in’ button ‘An email address required.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon leaving ‘Email address’ field is empty and filling ‘Password’ field with valid data and clicking on ‘Sign in’ button ‘An email address required.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with valid data and leaving ‘Password’ field is empty and clicking on ‘Sign in’ button ‘Password is required.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon leaving ‘Email address’ field is empty and filling ‘Password’ field with invalid data and clicking on ‘Sign in’ button ‘An email address required.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with invalid data and leaving ‘Password’ field is empty and clicking on ‘Sign in’ button ‘Password is required.’ message is shown.
+
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with valid non-existing data and ‘Password’ field with valid data and clicking on ‘Sign in’ button ‘Authentication failed.’ message is shown.
+[‘Authentication’ page, ‘Already Registered?’ window] Verify upon filling ‘Email address’ field with valid existing data and filling ‘Password’ field with valid non-existing data and clicking on ‘Sign in’ button ‘Authentication failed.’ message is shown.
+
+--EMAIL--
+Valid:
+1. The basic format of an e-mail address is- local-part@domain-part (max: 64@255 characters, no more 256 in total).
+2. The local part:
+-- latin letters in upper and/or lower case (A-Z, a-z)
+-- numbers (from 0 to 9)
+-- special characters like !#$%&’*+-/=?^_{|}~,
+-- dot: . (not first or last character)
+3. The domain part:
+-- has two parts separated by dot(.)
+-- latin letters in upper and/or lower case (A-Z, a-z)
+-- numbers (from 0 to 9)
+-- hyphen: - (not first or last character)
+
+Invalid:
+1. At least one of the domain/local part is missing.
+2. Local part length is from 1 to 64 symbols.
+3. Domain part length is more than 255 symbols.
+4. Total length is more than 256 symbols.
+5. Email consists of at least one space anywhere.
+6. Local part has dot: . (first or last character).
+7. Domain part has hyphen: - (first or last character).
+8. Domain part has special characters like !#$%&’*+-/=?^_{|}~,
+9. Domain part has one part without dot(.)
+
+--PASSWORD-- 
+Valid:
+1. Password length is from 5 to 32 symbols.
+
+Invalid: 
+1. Password length is less than 5.
+2. Password length is more than 32.
+
+---------
+
+[‘My Account’ page] Verify upon clicking on ‘Order History and Details’ button User is redirected to ‘Order History and Details’ page.
+[‘My Account’ page] Verify upon clicking on ‘My credit slips’ button User is redirected to ‘My credit slips’ page.
+[‘My Account’ page] Verify upon clicking on ‘My addresses’ button User is redirected to ‘My addresses’ page.
+[‘My Account’ page] Verify upon clicking on ‘My personal information’ button User is redirected to ‘My personal information’ page.
+[‘My Account’ page] Verify upon clicking on ‘My wishlists’ button User is redirected to ‘My wishlists’ page.
+[‘My Account’ page] Verify upon clicking on ‘Main’ button User is redirected to ‘Main’ page.
+[‘My Account’ page] Verify upon clicking on ‘Return to Home’ icon User is redirected to ‘Main’ page.
+
+---------
+
+[‘My Account’ page] Verify if 'Sign out' button is displayed if User is signed in.
+[‘My Account’ page] Verify upon clicking ‘Sign out’ button is redirected to ‘Authentication’ page.
+

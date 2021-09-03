@@ -1,4 +1,7 @@
 require 'selenium/webdriver'
+require 'rspec'
+require 'capybara'
+require 'cucumber'
 
 class Driver
   def initialize

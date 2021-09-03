@@ -1,5 +1,10 @@
-class WomenPage
+class WomenPage  < BasePage
     PAGE_TITLE = 'WOMEN'
+  
+  
+  def on_page?
+        true 
+    end
 
     def page_title
         #TBD to move to parent page

@@ -1,0 +1,21 @@
+Verify upon clicking 'Women' category user is redirected to Women page.
+Verify upon cliking 'Women' category URL querey string match with redirect URL Woman page.
+Verify upon clicking 'Specials' category user is redirected to Price drop page.
+Verify upon clicking 'New products' category user is redirected to New products page.
+Verify upon clicking 'Best sellers' category user is redirected to Best sellers page.
+Verify upon clicking 'Our stores' category user is redirected to Our store(s) page.
+Verify upon clicking 'Contact us' category user is redirected to Contact us page.
+Verify upon clicking 'Terms and conditions of use' category user is redirected to Terms and conditions of use page.
+Verify upon clicking 'About us' category user is redirected to About us page.
+Verify upon clicking 'Sitemap' category user is redirected to Sitemap page.
+Verify upon clicking 'My orders' category user is redirected to Authentication page.
+Verify upon clicking 'My credit slips' category user is redirected to Authentication page.
+Verify upon clicking 'My addresses' category user is redirected to Authentication page.
+Verify upon clicking 'My personal info' category user is redirected to Authentication page.
+Verify upon clicking 'My personal info' category user is redirected to Authentication page.
+Verify upon clicking 'Social media link Facebook' user is redirect to Facebook page.
+Verify upon clicking 'Social media link Twitter' user is redirect to Twitter page.
+Verify upon clicking 'Social media link YouTube' user is redirect to Youtube page.
+Verify upon clicking 'Social media link Google+ ' user is redirect to Google+ page.
+Verify upon entering a valid email user can receive newsletters.
+Verify upon User can’t receive newsletters whithout Invalid email address.'Invalid email address..' message is shown.g

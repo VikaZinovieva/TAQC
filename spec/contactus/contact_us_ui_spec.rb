@@ -1,5 +1,5 @@
 require_relative '../spec_helper'
-#rspec spec/contactus/contact_us_ui.rb  --color --format doc
+#rspec spec/contactus/contact_us_ui_spec.rb  --color --format doc
 RSpec.describe 'Contact us page' do
   landing_page = LandingPage.new
   contact_us_page = ContactUs.new

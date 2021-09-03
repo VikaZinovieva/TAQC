@@ -56,7 +56,7 @@ class ContactUs < BasePage
     browser.find_element(xpath: '//div[@id = "center_column"]/div[@class = "alert alert-danger"]')
   end
 
-  def  message_successfully_sent
+  def message_successfully_sent
     browser.find_element(class: 'alert-success')
   end
 

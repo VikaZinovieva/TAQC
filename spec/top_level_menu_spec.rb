@@ -22,7 +22,7 @@ RSpec.describe 'TopLevelMenu tab' do
     it 'verify that tshirts button is diplayed' do
       expect(tplevelmenu_tab.tshirts.displayed?).to be(true)
     end
-
+    
     it 'verify that all tab with buttons is displayed' do
       expect(tplevelmenu_tab.tplm_bar.displayed?).to be(true)
     end

@@ -5,8 +5,8 @@ RSpec.describe 'Women page' do
   women_page = WomenPage.new
 
   titles = ["Categories", "Size", "Color", "Compositions", "Styles", "Properties", "Availability", "Manufacturer", "Condition"]
-  categories = ["Tops", "Dresses"]
-  size = ["S", "M", "L"]
+  categories = ['Tops', 'Dresses']
+  size = ['S', 'M', 'L']
   color = ["Beige", "White", "Black", "Orange", "Blue", "Green", "Yellow", "Pink"]
   compositions = ["Cotton", "Polyester", "Viscose"]
   styles = ["Casual", "Dressy", "Girly"]
@@ -14,9 +14,9 @@ RSpec.describe 'Women page' do
   availability = ["In stock"]
   manufacturer = ["Fashion Manufacturer"]
   condition = ["New"]
-    
+
   before(:all) do
-    browser.get(HOME_PAGE)
+    get_home_page
     landing_page.women_button.click
   end
 

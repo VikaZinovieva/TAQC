@@ -2,10 +2,12 @@ require 'selenium/webdriver'
 require 'rspec'
 require 'capybara'
 require 'cucumber'
+require 'pry'
 
 class Driver
   def initialize
-    $driver = Selenium::WebDriver.for :chrome
+    browser = ENV['BROWSER'].nil? ? :firefox : ENV['BROWSER'].to_sym
+    $driver = Selenium::WebDriver.for browser
     $driver.manage.timeouts.implicit_wait = 10 # seconds
   end
 end
@@ -16,3 +18,12 @@ def browser
   $driver
 end
 
+def get_home_page
+  max_tries = 5
+  begin
+    browser.get(HOME_PAGE)
+  rescue
+    max_tries -= 1
+    retry while max_tries > 0
+  end
+end

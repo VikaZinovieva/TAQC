@@ -1,5 +1,7 @@
 class MyAccountPage < BasePage
- 
+
+  MY_ACCOUNT_PAGE_URL = 'http://automationpractice.com/index.php?controller=my-account'
+
   def button(name)
     browser.find_element(xpath: "//a[@title= \"#{name}\"]")
   end

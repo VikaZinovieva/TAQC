@@ -151,4 +151,76 @@ to debug
 
 # rspec spec/search_spec.rb:37 lets You run only test at line 37
 
+3.09
+hooks --> before(:each) before(:all)
+before(:all) -> actions before spec runs examples
+before(:each) -> actions before spec each examples
 
+1) test application must be in same state after tests as it was before
+2) each test must be independant
+
+order of examples -> use contexts
+
+dropdowns on UI
+  # method click on dropdown button
+  # method with dropdown element
+  # method which grabs all elements from dropdown
+  # method which iterates through dropdown options and find suitable by text
+
+filters
+not working
+
+other browser support
+now we run as
+BROWSER=firefox rspec path/to/spec
+BROWSER=chrome rspec path/to/spec
+
+handle not available site
+added get_home_page method to driver
+
+let
+https://relishapp.com/rspec/rspec-core/v/2-5/docs/helper-methods/let-and-let
+
+raketasks -> https://www.rubyguides.com/2019/02/ruby-rake/
+
+rake task:
+1) setup application
+2) run tests
+3) store report
+4) shutdown application
+
+rspec rake task
+https://relishapp.com/rspec/rspec-core/docs/command-line/rake-task
+
+In case of comments:
+1) open PR
+2) We receive comments
+3) Make changes addressing comments in this PR
+4) Commit changes
+5) Click Resolve conversation when fixed comment
+
+How to write code:
+0) how lead tells
+1) how test class is written
+2) how test framework is written
+3) how code convention tells
+
+What do we want from automation:
+1) report with run results
+2) quick
+3) guideline on how to write tests
+4) possibilities to run tests
+5) structured
+6) understandable results
+7) covers valid/invalid paths
+8) we can see coverage of features
+9) order of test execution
+10) performance testing
+11) DB
+12) easy in use
+
+TBD: class for browser interactions
+bin.sh
+
+Docker
+https://docker-curriculum.com/#introduction

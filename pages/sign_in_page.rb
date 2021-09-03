@@ -21,7 +21,7 @@ class SignInPage < BasePage
     email_input.send_keys(email)
     password_input.send_keys(password)
     sign_in_button.click
-    wait_for{ browser.find_element(id: 'my-account') }
+    wait_for{ my_account }
   end
   
   def error_message

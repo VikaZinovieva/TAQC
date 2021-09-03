@@ -13,5 +13,13 @@ class MyAccountPage < BasePage
     wait_for{ page.url_include?(link) }
   end
 
+  def sign_out_button
+    browser.find_element(class: 'logout')
+  end
+
+  def home_icon
+    browser.find_element(class: 'icon-home')
+  end
+
 end
 

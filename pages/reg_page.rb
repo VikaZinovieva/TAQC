@@ -57,10 +57,25 @@ class RegPage < BasePage
     browser.find_element(id: 'alias').send_keys(reg_data['alis'])
   end
 
+  def clearall
+    browser.find_element(id: 'customer_firstname').clear
+    browser.find_element(id: 'customer_lastname').clear
+    browser.find_element(id: 'passwd').clear
+    browser.find_element(id: 'address1').clear
+    browser.find_element(id: 'city').clear
+    browser.find_element(id: 'postcode').clear
+    browser.find_element(id: 'phone_mobile').clear
+    browser.find_element(id: 'alias').clear
+  end
+
   def fname
     browser.find_element(id: 'customer_firstname')
   end
 
+  def refresh_em
+    browser.find_element(id: 'customer_firstname').send_keys(reg_data['first'])
+  end
+  
   def lname
     browser.find_element(id: 'customer_lastname')
   end
@@ -87,8 +102,6 @@ class RegPage < BasePage
     browser.get("http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation");
     browser.navigate.refresh
   end
-
-
 
   def on_page?
     page_title.include?(PAGE_TITLE)

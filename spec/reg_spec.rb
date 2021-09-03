@@ -66,6 +66,17 @@ end
       expect(reg_page.url_include?('account-creation')).equal?(true)
     end
 
+    it '"First name" field exist' do
+      expect(reg_page.fname.displayed?).equal?(true)
+    end
+
+    it '"create an account" button exist' do
+      expect(reg_page.done_button.displayed?).equal?(true)
+    end
+
+    # it 'user can fill "First name" maximum symbols' do
+    #  reg_data['first'] = 'qwerty'* 50
+
     it '"create an account" button exist' do
       expect(reg_page.done_button.displayed?).to eq(true)
     end
@@ -81,6 +92,22 @@ end
     it 'user can register with valid data' do
       current_url = browser.current_url
       reg_page.wait_for{ current_url != browser.current_url }
+      reg_page.reg_input(reg_data)
+      reg_page.done_button.click
+      expect(reg_page.url_include?('my-account')).equal?(true)
+    end
+
+    it 'user can loss data after refreshing' do
+      #current_url = browser.current_url
+      #reg_page.wait_for{ current_url != browser.current_url }
+     reg_page.reg_input(reg_data)
+     reg_page.ref
+     expect(reg_page.refresh_em.text) != ""
+    end
+
+    it 'verifies user can register' do
+      reg_page.clearall
+      reg_data['first'] = 'Joy'
       reg_page.reg_input(reg_data)
       reg_page.done_button.click
       expect(reg_page.url_include?('my-account')).to eq(true)

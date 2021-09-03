@@ -1,0 +1,12 @@
+------Positive--------
+1) Verify that 'CUSTOMER SERVICE - CONTACT US' is opened after clicking 'Contact us' button
+2) Verify that user can send a message with valid credentials
+3) Verify that user can return to start page by clicking 'Return to Home' link on 'CUSTOMER SERVICE - CONTACT US' page
+4) Verify that user can choose 'Customer service' from 'Subject Heading' dropdown menu on 'CUSTOMER SERVICE - CONTACT US' page
+5) Verify that user can choose 'Webmaster' from 'Subject Heading' dropdown menu on 'CUSTOMER SERVICE - CONTACT US' page
+6) Verify that user can return to start page by clicking 'Home' button after successful message sending on 'CUSTOMER SERVICE - CONTACT US' page
+7) Verify that 'Message', 'Order reference', 'Email address', 'Attach File' fields and 'Choose file', 'Send' buttons and 'Subject Heading' dropdown are displayed on 'CUSTOMER SERVICE - CONTACT US' page
+------Negative--------
+1) Verify that user can't send a message with invalid credentials
+2) Verify that user can't send a message without credentials
+3) Verify that user can't send a message without filled 'Message' field

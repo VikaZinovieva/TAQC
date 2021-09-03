@@ -1,0 +1,16 @@
+Positive:
+Fill valid data in fields and click 'Register'
+Fill out the form without the required items
+Fill out the form using Cyrillic characters
+Reload the page with the passed registration
+Reload the page with your registration data
+Choose a future date of birth
+Fill in the name with the maximum number of characters: swdefrtgyhuiolokjhgfdsasxdfghjklkjuhyygtredsxcvbnhj
+
+Negative:
+Don't fill in anything and start registering
+Fill a non-existent index
+Fill a non-valid phone number
+Fill invalid password when you start registeing
+Fill field 'Password' symbols '@/*$%" ' ` | /' and click 'Register'
+Fill in your first and last name with @/*$%" ' ` | /

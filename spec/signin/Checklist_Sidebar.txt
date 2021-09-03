@@ -12,7 +12,7 @@ ________Categories__________
    displays only items 'Tops' on page
 
 4. Verify selecting 'Categories' filter option 'Dresses' 
-   displays only items 'Tops' on page
+   displays only items 'Dresses' on page
 
 __________Size___________
 

@@ -1,0 +1,18 @@
+['Authentication' page]
+Verify that user can star registration with valid email
+Verify that user can`t start  registration with invalid email
+Verify that user can`t start registration with existed in the system email
+
+['Create an account' page]
+Verify that the Registration form contains:
+Title, First Name, Last Name, Password, Email, Date of birth, Company, Address, City, State, Zip code, Country, Mobile phone, Alias and click ‘Register’
+Verify that the password is in encrypted form when entered
+Verify that tab functionality is working properly
+Verify that 'First name' and 'Last name' fields validate with the maximum number of characters: 'swdefrtgyhuiolokjhgfdsasxdfghjklkjuhyygtredsxcvbnhj'
+Verify that all the required fields are marked with '*' against the field
+Verify that system generates a validation message when clicking on submit button without filling all the mandatory fields.
+Verify that entering blank spaces on mandatory fields lead to validation error
+Verify that system generates a validation message when entering existing username
+Verify that the date of birth field should not allow the dates greater than current date
+Verify that the validation of numeric fields by entering alphabets and characters
+Verify that leading and trailing spaces are trimmed after clicking on submit button

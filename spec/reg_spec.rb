@@ -60,7 +60,7 @@ end
   context 'when valid credentional' do
     it 'verify that user can start registration' do
       reg_page.email_find.clear
-      value = 'abc41@ukr.net'
+      value = 'abc14@ukr.net'
       reg_page.email_input(value)
       reg_page.submt_button.click
       expect(reg_page.url_include?('account-creation')).equal?(true)

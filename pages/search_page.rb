@@ -1,6 +1,6 @@
 class SearchPage < BasePage
   PAGE_TITLE = 'SEARCH'
-
+  # Buttons, fields
   def search_input
     browser.find_element(id: 'search_query_top')
   end
@@ -13,15 +13,17 @@ class SearchPage < BasePage
 	search_input.clear
     search_input.send_keys(data)
   end
-
-  def alert
-    browser.find_element(class: 'alert-warning')
-  end
   
   def search_label
 	browser.find_element(class: 'product-listing')
   end
-
+  
+  
+  # Active labels, messages, URL etc.
+  def alert
+    browser.find_element(class: 'alert-warning')
+  end
+ 
   def on_page?
     page_title.include?(PAGE_TITLE)
   end

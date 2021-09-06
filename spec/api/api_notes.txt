@@ -42,7 +42,7 @@ class ApiClient
   end
 
   def get_user(username)
-    response = Faraday.get('https://petstore.swagger.io/#/user', { 'username': username })
+    response = Faraday.get("https://petstore.swagger.io/v2/user/#{username}", {"accept" => "application/json"})
   end
 
   def create_user

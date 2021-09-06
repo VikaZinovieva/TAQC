@@ -224,3 +224,10 @@ bin.sh
 
 Docker
 https://docker-curriculum.com/#introduction
+
+
+
+06/09
+
+rest api - https://habr.com/ru/post/483202/
+request examples - https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/

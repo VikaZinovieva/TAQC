@@ -7,6 +7,8 @@ RSpec.describe 'Create -> Login -> Get' do
   app_cl = ApiClient.new
   body = app_cl.generate_random_body
 
+  before(:all) { app_cl.login_as_default_user }
+
   context 'verify user info' do
     it 'verifies user can registered' do
       response = app_cl.create_user(body)
@@ -19,10 +21,6 @@ RSpec.describe 'Create -> Login -> Get' do
     end
 
     it 'verifies user can get info' do
-      # this test is flaky
-      # sometimes passes, sometimes no
-      # investigate the reason
-      # must be something with user created
       response = app_cl.get_user(body[:username])
       expect(response.status).to eq(200)
     end

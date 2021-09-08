@@ -4,16 +4,18 @@ RSpec.describe 'Women page' do
   landing_page = LandingPage.new
   women_page = WomenPage.new
 
-  titles = ["Categories", "Size", "Color", "Compositions", "Styles", "Properties", "Availability", "Manufacturer", "Condition"]
+  titles = ['Categories', 'Size', 'Color', 'Compositions', 'Styles', 'Properties', 'Availability', 'Manufacturer', 'Condition', 'Price', 'Subcategories']
   categories = ['Tops', 'Dresses']
   size = ['S', 'M', 'L']
-  color = ["Beige", "White", "Black", "Orange", "Blue", "Green", "Yellow", "Pink"]
-  compositions = ["Cotton", "Polyester", "Viscose"]
-  styles = ["Casual", "Dressy", "Girly"]
-  properties = ["Colorful Dress", "Maxi Dress", "Midi Dress", "Short Dress", "Short Sleeve"]
-  availability = ["In stock"]
-  manufacturer = ["Fashion Manufacturer"]
-  condition = ["New"]
+  color = ['Beige', 'White', 'Black', 'Orange', 'Blue', 'Green', 'Yellow', 'Pink']
+  compositions = ['Cotton', 'Polyester', 'Viscose']
+  styles = ['Casual', 'Dressy', 'Girly']
+  properties = ['Colorful Dress', 'Maxi Dress', 'Midi Dress', 'Short Dress', 'Short Sleeve']
+  availability = ['In stock']
+  manufacturer = ['Fashion Manufacturer']
+  condition = ['New']
+  price = ['Range']
+  subcategories = ['TOPS', 'DRESSES']
 
   before(:all) do
     get_home_page
@@ -201,6 +203,41 @@ RSpec.describe 'Women page' do
 
     it 'verifies Condition filter New option displayed' do
       expect(women_page.condition_filter_new.text).to include(condition[0])
+    end
+  end
+
+  context "verifies Price filter" do
+
+    it 'verifies Price filter title displayed' do
+      expect(women_page.price_filter.text).to eq(titles[9])
+    end
+
+    it 'verifies Price filter slider displayed' do
+      expect(women_page.price_filter_slider.text).to include(price[0])
+    end
+  end
+
+
+  context "verifies Subcategories filter with all options" do
+
+    it 'verifies Subcategories filter title displayed' do
+      expect(women_page.subcategories_filter.text).to eq(titles[10])
+    end
+
+    it 'verifies Subcategories filter Tops option displayed' do
+      expect(women_page.subcategories_filter_tops.text).to include(subcategories[0])
+    end
+
+    it 'verifies Subcategories filter Tops icon displayed' do
+      expect(women_page.subcategories_filter_tops_icon.displayed?).to eq(true)
+    end
+
+    it 'verifies Subcategories filter Dresses option displayed' do
+      expect(women_page.subcategories_filter_dresses.text).to include(subcategories[1])
+    end
+
+    it 'verifies Subcategories filter Dresses icon displayed' do
+      expect(women_page.subcategories_filter_dresses_icon.displayed?).to eq(true)
     end
   end
 

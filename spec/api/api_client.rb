@@ -13,13 +13,14 @@ class ApiClient
 
   def generate_random_body
     {
-        id: rand(1000),
-        username: "user_#{SecureRandom.hex}",
-        first_name: SecureRandom.hex,
-        last_name: SecureRandom.hex,
-        email: "#{SecureRandom.hex}@gmail.com",
-        password: SecureRandom.hex,
-        phone: SecureRandom.hex
+        "id": rand(1000),
+        "username": "user_#{SecureRandom.hex}",
+        "firstName": SecureRandom.hex,
+        "lastName": SecureRandom.hex,
+        "email": "#{SecureRandom.hex}@gmail.com",
+        "password": SecureRandom.hex,
+        "phone": SecureRandom.hex,
+        "userStatus": 0
     }
   end
 
@@ -27,17 +28,7 @@ class ApiClient
     generate_random_body.merge(opts)
   end
 
-  def create_user(opts)
-    body = {
-        "id": opts[:id],
-        "username": opts[:username],
-        "firstName": opts[:first_name],
-        "lastName": opts[:last_name],
-        "email": opts[:email],
-        "password": opts[:password],
-        "phone": opts[:phone],
-        "userStatus": 0
-    }
+  def create_user(body)
     app_request(:post, @base_url, body)
   end
 

@@ -1,18 +1,32 @@
 require 'faraday'
 class ApiClient
-  # refactoring needed
-  # headers seem to always be same
-  # response = Faraday.get('https://petstore.swagger.io/v2/user/login') do |req|
-  #       req.headers['Content-Type'] = 'application/json'
-  #       req.body = body.to_json
-  #     end
-  # seems to be good to refactor to one-liner
-
   APP_JS = "application/json"
-  DEFAULT_PAGE = "https://petstore.swagger.io/v2/user/"
+
+  def initialize
+    @base_url = 'https://petstore.swagger.io/v2/user/'
+  end
 
   def get_user(username)
-    response = Faraday.get(DEFAULT_PAGE + "#{username}", {"accept" => APP_JS})
+    app_request(:get, @base_url + "#{username}")
+  end
+
+  def generate_random_body
+    {
+        # added limits to generated string
+        # there is limit somewhere, which doesnt allow to get user
+        # we have to find it out :)
+        id: 1000 + rand(1000),
+        username: "user_#{SecureRandom.hex(10)}",
+        first_name: SecureRandom.hex(10),
+        last_name: SecureRandom.hex(10),
+        email: "#{SecureRandom.hex(10)}@gmail.com",
+        password: SecureRandom.hex(10),
+        phone: SecureRandom.hex(10)
+    }
+  end
+
+  def adjust_body(opts)
+    generate_random_body.merge(opts)
   end
 
   def create_user(opts)
@@ -26,38 +40,30 @@ class ApiClient
         "phone": opts[:phone],
         "userStatus": 0
     }
-    response = Faraday.post(DEFAULT_PAGE) do |req|
-      req.headers['Content-Type'] = APP_JS
-      req.body = body.to_json
-    end
+    app_request(:post, @base_url, body)
   end
 
   def user_login(username, password)
-    body = {
-        "username": username,
-        "password": password
-    }
-    response = Faraday.get(DEFAULT_PAGE + "login") do |req|
-      req.headers['Content-Type'] = APP_JS
-      req.body = body.to_json
-    end
+    app_request(:get, @base_url + 'login', { "username": username, "password": password })
   end
 
   def user_logout
-    response = Faraday.get(DEFAULT_PAGE + "logout", {"accept" => APP_JS})
+    app_request(:get, @base_url + 'logout')
   end
 
   def update_user(username, body)
-    response = Faraday.put(DEFAULT_PAGE + "#{username}") do |req|
-      req.headers['Content-Type'] = APP_JS
-      req.body = body.to_json
-    end
+    app_request(:put, @base_url + "#{username}", body)
   end
 
   def delete_user(username)
-    response = Faraday.delete(DEFAULT_PAGE + "#{username}") do |req|
+    app_request(:delete, @base_url + "#{username}")
+  end
+
+  private
+  def app_request(type, url, body = nil)
+    Faraday.send(type, url) do |req|
       req.headers['Content-Type'] = APP_JS
-      req.body = { "username": username }.to_json
-   end
+      req.body = body.to_json unless body.nil?
+    end
   end
 end

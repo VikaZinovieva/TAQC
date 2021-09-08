@@ -49,3 +49,29 @@ class ApiClient
   # makes post to users with body
   end
 end
+
+1) POST /user - valid checks   -->  Kovryha Danylo
+- with each parameter valid (id, username, parameter length, special symbols... think of testing a string)
+2) POST /user invalid checks   -->  Zinovieva Vika
+- with each parameter invalid (id, username, parameter length, special symbols... think of testing a string)
+3) GET /user/username - valid and invalid checks  --> Bielenova Kateryna
+- parameter username passed to enpoint can be valid and invalid(existing, not-existing, too long...)
+4) PUT /user/username - valid checks  --> Khukhrianskyi Andrew
+- with each parameter valid (id, username, parameter length, special symbols... think of testing a string)
+5) PUT /user/username - invalid checks  --> Kytaihora Volodymyr
+- with each parameter valid (id, username, parameter length, special symbols... think of testing a string)
+6) DELETE /user/username - valid and invalid checks  --> Bielik Viktoriia
+- parameter username passed to enpoint can be valid and invalid(existing, not-existing, too long...)
+7) GET /user/login - valid-invalid checks   -->  Tambovtsev Serhii
+- user logs in;
+- one user is logged in, another tries to login while previous isn't logged out
+- same user tries to log in two times in row
+- login - logout - login
+- ...
+8) GET /user/logout - valid-invalid checks   --> Politikova Anna
+- user logs out;
+- same user tries to log out two times in row
+- login - logout - login - logout
+- ...
+
+

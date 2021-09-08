@@ -1,3 +1,4 @@
+require 'faraday'
 class ApiClient
   # refactoring needed
   # headers seem to always be same
@@ -7,8 +8,11 @@ class ApiClient
   #     end
   # seems to be good to refactor to one-liner
 
+  APP_JS = "application/json"
+  DEFAULT_PAGE = "https://petstore.swagger.io/v2/user/"
+
   def get_user(username)
-    response = Faraday.get("https://petstore.swagger.io/v2/user/#{username}", {"accept" => "application/json"})
+    response = Faraday.get(DEFAULT_PAGE + "#{username}", {"accept" => APP_JS})
   end
 
   def create_user(opts)
@@ -22,8 +26,8 @@ class ApiClient
         "phone": opts[:phone],
         "userStatus": 0
     }
-    response = Faraday.post('https://petstore.swagger.io/v2/user') do |req|
-      req.headers['Content-Type'] = 'application/json'
+    response = Faraday.post(DEFAULT_PAGE) do |req|
+      req.headers['Content-Type'] = APP_JS
       req.body = body.to_json
     end
   end
@@ -33,26 +37,26 @@ class ApiClient
         "username": username,
         "password": password
     }
-    response = Faraday.get('https://petstore.swagger.io/v2/user/login') do |req|
-      req.headers['Content-Type'] = 'application/json'
+    response = Faraday.get(DEFAULT_PAGE + "login") do |req|
+      req.headers['Content-Type'] = APP_JS
       req.body = body.to_json
     end
   end
 
   def user_logout
-    response = Faraday.get("https://petstore.swagger.io/v2/user/logout", {"accept" => "application/json"})
+    response = Faraday.get(DEFAULT_PAGE + "logout", {"accept" => APP_JS})
   end
 
   def update_user(username, body)
-    response = Faraday.put("https://petstore.swagger.io/v2/user/#{username}") do |req|
-      req.headers['Content-Type'] = 'application/json'
+    response = Faraday.put(DEFAULT_PAGE + "#{username}") do |req|
+      req.headers['Content-Type'] = APP_JS
       req.body = body.to_json
     end
   end
 
   def delete_user(username)
-    response = Faraday.delete("https://petstore.swagger.io/v2/user/#{username}") do |req|
-      req.headers['Content-Type'] = 'application/json'
+    response = Faraday.delete(DEFAULT_PAGE + "#{username}") do |req|
+      req.headers['Content-Type'] = APP_JS
       req.body = { "username": username }.to_json
    end
   end

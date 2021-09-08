@@ -46,7 +46,27 @@ GEM
       cucumber-cucumber-expressions (~> 12.1, >= 12.1.2)
       cucumber-messages (~> 17.0, >= 17.0.1)
     diff-lcs (1.4.4)
+    faraday (1.7.1)
+      faraday-em_http (~> 1.0)
+      faraday-em_synchrony (~> 1.0)
+      faraday-excon (~> 1.1)
+      faraday-httpclient (~> 1.0.1)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.1)
+      faraday-patron (~> 1.0)
+      faraday-rack (~> 1.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords (>= 0.0.4)
+    faraday-em_http (1.0.0)
+    faraday-em_synchrony (1.0.0)
+    faraday-excon (1.1.0)
+    faraday-httpclient (1.0.1)
+    faraday-net_http (1.0.1)
+    faraday-net_http_persistent (1.2.0)
+    faraday-patron (1.0.0)
+    faraday-rack (1.0.0)
     ffi (1.15.4)
+    ffi (1.15.4-x64-mingw32)
     ffi (1.15.4-x86-mingw32)
     method_source (1.0.0)
     mime-types (3.3.1)
@@ -55,8 +75,11 @@ GEM
     mini_mime (1.1.1)
     mini_portile2 (2.6.1)
     multi_test (0.1.2)
+    multipart-post (2.1.1)
     nokogiri (1.12.4)
       mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
+    nokogiri (1.12.4-x64-mingw32)
       racc (~> 1.4)
     nokogiri (1.12.4-x86-mingw32)
       racc (~> 1.4)
@@ -70,6 +93,7 @@ GEM
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
+    rake (13.0.6)
     regexp_parser (2.1.1)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -84,6 +108,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
@@ -95,14 +120,17 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
   x86-mingw32
   x86_64-darwin-19
 
 DEPENDENCIES
   capybara
   cucumber
+  faraday
   ffi
   pry
+  rake
   rspec
   selenium-webdriver
 

@@ -1,6 +1,7 @@
 require 'faraday'
 class ApiClient
-  APP_JS = "application/json"
+  APP_JS = 'application/json'
+  DEFAULT_USER = 'taqc_default'
 
   def initialize
     @base_url = 'https://petstore.swagger.io/v2/user/'
@@ -12,16 +13,13 @@ class ApiClient
 
   def generate_random_body
     {
-        # added limits to generated string
-        # there is limit somewhere, which doesnt allow to get user
-        # we have to find it out :)
-        id: 1000 + rand(1000),
-        username: "user_#{SecureRandom.hex(10)}",
-        first_name: SecureRandom.hex(10),
-        last_name: SecureRandom.hex(10),
-        email: "#{SecureRandom.hex(10)}@gmail.com",
-        password: SecureRandom.hex(10),
-        phone: SecureRandom.hex(10)
+        id: rand(1000),
+        username: "user_#{SecureRandom.hex}",
+        first_name: SecureRandom.hex,
+        last_name: SecureRandom.hex,
+        email: "#{SecureRandom.hex}@gmail.com",
+        password: SecureRandom.hex,
+        phone: SecureRandom.hex
     }
   end
 
@@ -57,6 +55,10 @@ class ApiClient
 
   def delete_user(username)
     app_request(:delete, @base_url + "#{username}")
+  end
+
+  def login_as_default_user
+    user_login(DEFAULT_USER, DEFAULT_USER)
   end
 
   private

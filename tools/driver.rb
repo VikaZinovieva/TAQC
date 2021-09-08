@@ -6,8 +6,8 @@ require 'pry'
 
 class Driver
   def initialize
-    browser = ENV['BROWSER'].nil? ? :firefox : ENV['BROWSER'].to_sym
-    $driver = Selenium::WebDriver.for browser
+    return if ENV['BROWSER'].nil?
+    $driver = Selenium::WebDriver.for ENV['BROWSER'].to_sym
     $driver.manage.timeouts.implicit_wait = 10 # seconds
   end
 end

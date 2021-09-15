@@ -10,7 +10,12 @@ RSpec.describe 'Login ->logout -> Get' do
   before(:all) { app_cl.create_user(body)}
 
   context 'Positive login-logout tests' do
-    it 'with valid credentials' do
+    it 'user can login' do
+      response = app_cl.user_login(body[:username], body[:password])
+      expect(response.status).to eq(200)
+    end
+
+    it 'user can logout' do
       app_cl.user_login(body[:username], body[:password])
       response = app_cl.user_logout
       expect(response.status).to eq(200)
@@ -24,15 +29,31 @@ RSpec.describe 'Login ->logout -> Get' do
       expect(response.status).to eq(200)
     end
 
+    it 'user can not get data in the unregistered status'
+      app_cl.user_login(body[:username], body[:password])
+      app_cl.user_logout
+      response = app_cl.get_user(body[:username])
+      expect(response.status).to_eq(404)
+
+    end
+
   end
 
   context 'Negative login-logout tests' do
-	# Errors in the test
+    # Perhaps bug
     xit 'two times in row' do
       app_cl.user_login(body[:username], body[:password])
-	  app_cl.user_logout
+      app_cl.user_logout
       response = app_cl.user_logout
-      expect(response.status).to eq(403)
+      expect(response.status).to eq(401)
+    end
+    # Perhaps bug too
+    xit 'user can not get data after double logout'
+      app_cl.user_login(body[:username], body[:password])
+      app_cl.user_logout
+      app_cl.user_logout
+      response = app_cl.get_user(body[:username])
+      expect(response.status).to eq(401)
     end
   end
 

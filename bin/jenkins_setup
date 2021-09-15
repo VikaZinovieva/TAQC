@@ -1,0 +1,26 @@
+setup jenkins locally
+1. Manage Jenkins
+2. Manage Nodes and Clouds
+3. Add slave --- default settings
+-- change TCP port https://www.edureka.co/community/70625/disabled-agents-cannot-connect-security-configuration-screen
+4. Click on slave
+5. Download agent.jar (Require Java installed)
+6. Go in terminal or CMD to folder with agent.jar
+7. Execute command from Jenkins
+8. Verify jenkins slave in online
+
+Create Job
+1. Dashboard
+2. New item
+3. Freestyle project
+4. Source Code Management -> Git
+-- https://github.com/AndriiMish/TAQC.git
+5. Build
+6. Add build step
+-- Execute shell
+#!/bin/bash -l
+bundle install
+rspec spec/api/api_spec.rb
+7. Run job
+
+Demo -> few jobs

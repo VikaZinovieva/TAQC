@@ -1,4 +1,6 @@
 require 'faraday'
+require 'json'
+
 class ApiClient
   APP_JS = 'application/json'
   DEFAULT_USER = 'taqc_default'

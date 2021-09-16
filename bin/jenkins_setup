@@ -24,3 +24,21 @@ rspec spec/api/api_spec.rb
 7. Run job
 
 Demo -> few jobs
+
+
+Windows
+Add git sh.exe(typically C:\Program Files\Git\bin) to top of PATH variable
+
+For node
+Go to Jenkins settings -> Manage Jenkins slaves
+For your slave go to it's Settings
+Add label 'test'
+
+For job
+Find setting 'Restrict where this job can be run' and mark it
+Type label 'test'
+Select 'Execute shell'
+Add:
+bundle install
+rspec spec/api/api_spec.rb
+Run

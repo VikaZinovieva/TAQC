@@ -24,9 +24,7 @@ def generate_empty_username
   ''
 end
 
-
 RSpec.describe 'GET /user/username' do
-
   app_cl = ApiClient.new
   body = app_cl.generate_random_body
   

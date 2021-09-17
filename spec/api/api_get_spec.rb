@@ -4,20 +4,13 @@
 require_relative '../spec_helper'
 require_relative 'api_client.rb'
 
-def generate_random_symbol_username
-  symbols = %w(! @ $ % # ^ & * ( ) _ = +)
-  username = ''
-  rand(4..16).times { username << symbols[rand(0...symbols.size)] }
-  username
-end
-
 RSpec.describe 'GET /user/username' do
   app_cl = ApiClient.new
   body = app_cl.generate_random_body
 
   def retry_request(response, &block)
     max_retries = 5
-    while max_retries < 0
+    while max_retries > 0
       block_response = block.call
       max_retries -= 1
       return true if block_response.status == response

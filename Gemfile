@@ -9,4 +9,4 @@ gem 'cucumber'
 gem 'rake'
 gem 'faraday'
 gem 'json'
-
+gem 'securerandom'

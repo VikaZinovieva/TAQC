@@ -1,6 +1,7 @@
 require 'rspec'
 #require_relative '../tools/driver.rb'
 require 'pry'
+require 'securerandom'
 require_relative '../env/common_variables'
 require_relative '../pages/base_page'
 require_relative '../tools/caching_classes'

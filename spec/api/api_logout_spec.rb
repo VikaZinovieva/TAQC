@@ -28,6 +28,15 @@ RSpec.describe 'Login ->logout -> Get' do
       expect(response.status).to eq(200)
     end
 
+    it 'user can not get data in the unregistered status' do
+      #respons = 200, but exp = 404, why?
+      app_cl.user_login(body[:username], body[:password])
+      app_cl.user_logout
+      response = app_cl.get_user(body[:username])
+      expect(response.status).to eq(404)
+    end
+
+
     xit 'user can not get data in the unregistered status' do
       #respons = 200, but exp = 404, why?
       app_cl.user_login(body[:username], body[:password])
@@ -54,5 +63,5 @@ RSpec.describe 'Login ->logout -> Get' do
       response = app_cl.get_user(body[:username])
       expect(response.status).to eq(401)
   end
-end
   end
+end

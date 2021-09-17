@@ -60,8 +60,8 @@ RSpec.describe 'GET /user/username' do
         pending 'validations on update dont work' unless key == :long
         body = app_cl.adjust_body(username: value)
         app_cl.update_user(value, body)
-        response = app_cl.get_user(value)
-        expect(response.status).to eq(404)
+        request_success = retry_request(404) { app_cl.get_user(value) }
+        expect(request_success).to be_truthy
       end
     end
 
@@ -71,7 +71,9 @@ RSpec.describe 'GET /user/username' do
     end
 
     it 'user after deletion --> user not found' do
-      app_cl.delete_user(body[:username])
+      body = app_cl.generate_random_body
+      retry_request(200) { app_cl.create_user(body) }
+      retry_request(200) { app_cl.delete_user(body[:username]) }
       request_success = retry_request(404) { app_cl.get_user(body[:username]) }
       expect(request_success).to be_truthy
     end

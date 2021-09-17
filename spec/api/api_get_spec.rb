@@ -15,7 +15,6 @@ RSpec.describe 'GET /user/username' do
       max_retries -= 1
       return true if block_response.status == response
     end
-    true
   end
 
   before(:all) do

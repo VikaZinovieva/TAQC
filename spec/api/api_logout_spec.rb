@@ -3,13 +3,12 @@ require_relative 'api_client.rb'
 require 'securerandom'
 
 RSpec.describe 'Login ->logout -> Get' do
-
   app_cl = ApiClient.new
   body = app_cl.generate_random_body
 
   before(:all) { app_cl.create_user(body)}
 
-  context 'Positive login-logout tests' do
+  context 'when positive login-logout tests' do
     it 'user can login' do
       response = app_cl.user_login(body[:username], body[:password])
       expect(response.status).to eq(200)
@@ -29,16 +28,14 @@ RSpec.describe 'Login ->logout -> Get' do
     end
 
     it 'user can not get data in the unregistered status' do
-      #respons = 200, but exp = 404, why?
       app_cl.user_login(body[:username], body[:password])
       app_cl.user_logout
       response = app_cl.get_user(body[:username])
       expect(response.status).to eq(404)
     end
 
-
-    xit 'user can not get data in the unregistered status' do
-      #respons = 200, but exp = 404, why?
+    it 'user can not get data in the unregistered status' do
+      pending 'receiving 200'
       app_cl.user_login(body[:username], body[:password])
       app_cl.user_logout
       response = app_cl.get_user(body[:username])
@@ -47,21 +44,21 @@ RSpec.describe 'Login ->logout -> Get' do
   end
 
   context 'Negative login-logout tests' do
-    # Perhaps bug
-    xit 'two times in row' do
+    it 'two times in row' do
+      pending 'receiving 200'
       app_cl.user_login(body[:username], body[:password])
       app_cl.user_logout
       response = app_cl.user_logout
       expect(response.status).to eq(401)
     end
 
-    # Perhaps bug too
-    xit 'user can not get data after double logout' do
+    it 'user can not get data after double logout' do
+      pending 'receiving 200'
       app_cl.user_login(body[:username], body[:password])
       app_cl.user_logout
       app_cl.user_logout
       response = app_cl.get_user(body[:username])
       expect(response.status).to eq(401)
-  end
+    end
   end
 end
